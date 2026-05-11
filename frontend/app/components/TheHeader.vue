@@ -22,36 +22,40 @@ onMounted(() => {
     :class="[
       'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
       scrolled
-        ? 'bg-white/80 backdrop-blur-md shadow-sm py-3'
+        ? 'md:bg-transparent bg-white/90 backdrop-blur-md shadow-md py-3'
         : 'bg-transparent py-5',
     ]"
   >
     <div class="container mx-auto px-4 md:px-6">
       <nav class="flex items-center justify-between">
         <!-- Logo -->
-        <div class="flex items-center gap-2">
+        <a href="/" class="flex items-center gap-3 group">
           <div
-            class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg"
+            class="relative w-14 h-14 flex items-center justify-center transition-all duration-300"
           >
-            NH
+            <img
+              src="/assets/nupasa-logo-remove.png"
+              alt="Nupasa Logo"
+              class="w-10 h-10 object-contain"
+            />
           </div>
           <div class="flex flex-col">
             <span
               :class="[
-                'font-bold leading-tight',
-                scrolled ? 'text-gray-900' : 'text-gray-900 md:text-white',
+                'font-bold leading-tight text-lg tracking-tight',
+                'text-gray-900 md:text-white',
               ]"
               >Nurul Hidayah</span
             >
             <span
               :class="[
-                'text-xs',
-                scrolled ? 'text-primary' : 'text-primary md:text-white/80',
+                'text-xs font-medium uppercase tracking-[0.2em]',
+                scrolled ? 'text-primary md:text-secondary' : 'text-primary md:text-white/80',
               ]"
               >Parung Sapi</span
             >
           </div>
-        </div>
+        </a>
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center gap-8">
@@ -61,7 +65,7 @@ onMounted(() => {
             :href="link.href"
             :class="[
               'font-medium transition-colors hover:text-secondary',
-              scrolled ? 'text-gray-700' : 'text-gray-900 md:text-white',
+              'text-gray-700 md:text-white',
             ]"
           >
             {{ link.name }}

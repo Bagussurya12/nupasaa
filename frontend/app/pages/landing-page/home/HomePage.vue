@@ -1,4 +1,5 @@
 <script setup>
+import { ref, onMounted, onUnmounted } from "vue";
 definePageMeta({
   layout: "default",
 });
@@ -6,51 +7,81 @@ definePageMeta({
 const stats = [
   { label: "Santri Aktif", value: "300+" },
   { label: "Tenaga Pengajar", value: "10+" },
-  { label: "Program Unggulan", value: "5" },
+  { label: "Program Ekstrakurikuler", value: "5+" },
   { label: "Tahun Berdiri", value: "1993" },
 ];
 
+const carouselImages = [
+  "/assets/home-carousel/keluarga-1.jpg",
+  "/assets/home-carousel/alumni-group-1.jpg",
+  "/assets/home-carousel/foto-silat.jpg",
+  "/assets/home-carousel/santriawan-group-1.jpg",
+  "/assets/home-carousel/santriawati-group-1.jpg",
+  "/assets/home-carousel/santriawan-group-2.jpg",
+  "/assets/home-carousel/santriawati-group-2.jpg",
+  "/assets/home-carousel/santriawan-group-3.jpg",
+  "/assets/home-carousel/santriawati-group-3.jpg",
+  "/assets/home-carousel/santriawan-group-4.jpg",
+  "/assets/home-carousel/santriawati-person-1.jpg",
+  "/assets/home-carousel/santriwati-person-2.jpg",
+];
+
+const currentSlide = ref(0);
+let timer = null;
+
+const startTimer = () => {
+  timer = setInterval(() => {
+    currentSlide.value = (currentSlide.value + 1) % carouselImages.length;
+  }, 5000);
+};
+
+onMounted(() => {
+  startTimer();
+});
+
+onUnmounted(() => {
+  if (timer) clearInterval(timer);
+});
+
 const programs = [
-  {
-    title: "Tahfidz Al-Qur'an",
-    description:
-      "Program menghafal Al-Qur'an 30 Juz dengan metode mutqin dan sanad.",
-    icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
-  },
   {
     title: "Kajian Kitab Kuning",
     description:
-      "Pendalaman literatur klasik Islam (Turots) untuk mencetak ulama masa depan.",
+      "Pendalaman khazanah literatur klasik Islam sebagai fondasi untuk melahirkan generasi ulama masa depan yang berilmu, berakhlak, dan mampu menjawab tantangan zaman.",
     icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
   },
   {
     title: "Pendidikan Formal",
     description:
-      "Integrasi kurikulum pesantren dengan kurikulum nasional (SMP & SMA).",
+      "Pengintegrasian kurikulum pesantren dengan kurikulum nasional (MTs & MA) untuk menciptakan pendidikan yang seimbang antara pendalaman ilmu agama dan penguasaan ilmu umum.",
     icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4",
+  },
+  {
+    title: "Ekstrakurikuler",
+    description:
+      "Beragam kegiatan ekstrakurikuler yang dirancang untuk mengembangkan bakat dan minat santri, mencakup bidang olahraga, seni, hingga teknologi secara seimbang dan berkelanjutan.",
+    icon: "M13 10V3L4 14h7v7l9-11h-7z",
   },
 ];
 
 const facilities = [
   {
     name: "Masjid Jami'",
-    image:
-      "https://images.unsplash.com/photo-1765025121245-fc78fe005a45?q=80&w=3048&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/assets/home-facilities/masjid.JPG",
   },
   {
     name: "Asrama Nyaman",
-    image:
-      "https://images.unsplash.com/photo-1543364972-12a04a63ce01?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/assets/home-facilities/asrama.JPG",
+  },
+  {
+    name: "Lapangan Olahraga",
+    image: "/assets/home-facilities/lapangan-olahraga.jpg",
   },
   {
     name: "Laboratorium Komputer",
     image:
       "https://images.unsplash.com/photo-1719159381981-1327b22aff9b?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    name: "Lapangan Olahraga",
-    image:
-      "https://images.unsplash.com/photo-1738836082547-ee0b8f18ff1b?q=80&w=2834&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    status: "Coming Soon",
   },
 ];
 </script>
@@ -59,14 +90,23 @@ const facilities = [
   <div class="overflow-x-hidden">
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center pt-20">
-      <div class="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Pesantren Background"
-          class="w-full h-full object-cover brightness-[0.4]"
-        />
+      <div class="absolute inset-0 z-0 overflow-hidden">
+        <transition-group name="fade" tag="div" class="relative w-full h-full">
+          <div
+            v-for="(image, index) in carouselImages"
+            :key="image"
+            v-show="currentSlide === index"
+            class="absolute inset-0 w-full h-full transition-all duration-1000 ease-in-out"
+          >
+            <img
+              :src="image"
+              alt="Pesantren Background"
+              class="w-full h-full object-cover brightness-[0.4] scale-105"
+            />
+          </div>
+        </transition-group>
         <div
-          class="absolute inset-0 bg-gradient-to-r from-primary-dark/80 to-transparent"
+          class="absolute inset-0 bg-gradient-to-r from-primary-dark/80 to-transparent z-10"
         ></div>
       </div>
 
@@ -78,16 +118,16 @@ const facilities = [
             <span
               class="w-2 h-2 bg-secondary rounded-full animate-pulse"
             ></span>
-            Pendaftaran Santri Baru TA 2024/2025 Telah Dibuka
+            Pendaftaran Santri Baru TA 2026/2027 Telah Dibuka
           </div>
           <h1 class="text-5xl md:text-7xl font-bold leading-tight">
             Membentuk Generasi
-            <span class="text-secondary">Rabbani</span> Berakhlak Qur'ani
+            <span class="text-secondary">Rabbani</span> Berakhlakul Karimah
           </h1>
           <p class="text-xl text-gray-200 leading-relaxed max-w-2xl">
             Pondok Pesantren Nurul Hidayah Cabang Parung Sapi berkomitmen
-            memberikan pendidikan Islam terbaik dengan memadukan nilai-nilai
-            luhur kepesantrenan dan kemajuan teknologi.
+            Membentuk Cendekiawan Islam ahlussunah wal jama'ah yang berwawasan
+            agama yang mendalam & berpengetahuan modern
           </p>
           <div class="flex flex-col sm:flex-row gap-4 pt-4">
             <button
@@ -110,6 +150,21 @@ const facilities = [
               </svg>
             </button>
           </div>
+        </div>
+
+        <!-- Slide Indicators -->
+        <div class="flex gap-3 mt-12">
+          <button
+            v-for="(_, index) in carouselImages"
+            :key="index"
+            @click="currentSlide = index"
+            class="h-1.5 rounded-full transition-all duration-500"
+            :class="[
+              currentSlide === index
+                ? 'w-12 bg-secondary'
+                : 'w-4 bg-white/30 hover:bg-white/50',
+            ]"
+          ></button>
         </div>
       </div>
 
@@ -142,12 +197,12 @@ const facilities = [
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div class="relative">
             <div
-              class="aspect-square rounded-3xl overflow-hidden shadow-2xl relative z-10"
+              class="aspect-square rounded-3xl overflow-hidden shadow-2xl relative z-10 bg-white flex items-center justify-center"
             >
               <img
-                src="https://images.unsplash.com/photo-1542621334-a254cf47733d?q=80&w=800"
+                src="/assets/nupasa-logo-remove.png"
                 alt="About Pesantren"
-                class="w-full h-full object-cover"
+                class="w-full h-full object-contain p-4"
               />
             </div>
             <div
@@ -170,10 +225,10 @@ const facilities = [
               <span class="text-primary">Adab & Ilmu</span>
             </h2>
             <p class="text-lg text-gray-600 leading-relaxed">
-              Didirikan sejak tahun 1998, Pondok Pesantren Nurul Hidayah Parung
-              Sapi telah menjadi mercusuar ilmu di wilayah Bogor. Kami fokus
-              pada pembentukan karakter santri yang tangguh, mandiri, dan
-              istiqomah dalam menjalankan syariat Islam.
+              Didirikan sejak tahun 1993, Pondok Pesantren Nurul Hidayah Cabang
+              Parung Sapi telah menjadi mercusuar ilmu di wilayah Bogor Barat.
+              Kami fokus pada pembentukan karakter santri yang tangguh, mandiri,
+              dan istiqomah dalam menjalankan syariat Islam.
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div class="flex gap-4">
@@ -197,9 +252,6 @@ const facilities = [
                 </div>
                 <div>
                   <h4 class="font-bold text-gray-900">Kurikulum Terpadu</h4>
-                  <p class="text-sm text-gray-500">
-                    Kombinasi ilmu agama dan umum.
-                  </p>
                 </div>
               </div>
               <div class="flex gap-4">
@@ -223,16 +275,13 @@ const facilities = [
                 </div>
                 <div>
                   <h4 class="font-bold text-gray-900">Asatidzah Kompeten</h4>
-                  <p class="text-sm text-gray-500">
-                    Lulusan universitas ternama.
-                  </p>
                 </div>
               </div>
             </div>
             <button
               class="text-primary font-bold flex items-center gap-2 group"
             >
-              Lihat Profil Selengkapnya
+              <NuxtLink to="profile">Lihat Profil Selengkapnya</NuxtLink>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5 transition-transform group-hover:translate-x-1"
@@ -343,11 +392,12 @@ const facilities = [
             Lingkungan Belajar yang Kondusif
           </h2>
         </div>
-        <button
+        <NuxtLink
+          to="facility"
           class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-6 py-3 rounded-xl font-bold transition-all"
         >
           Lihat Semua Fasilitas
-        </button>
+        </NuxtLink>
       </div>
 
       <div class="container mx-auto px-4 md:px-6">
@@ -366,6 +416,12 @@ const facilities = [
               class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"
             ></div>
             <div class="absolute bottom-6 left-6 right-6">
+              <div
+                v-if="facility.status"
+                class="inline-block px-3 py-1 bg-secondary text-white text-[10px] font-bold uppercase tracking-widest rounded-full mb-2"
+              >
+                {{ facility.status }}
+              </div>
               <h4 class="text-white font-bold text-xl">{{ facility.name }}</h4>
             </div>
           </div>
@@ -390,7 +446,7 @@ const facilities = [
             <h2
               class="text-4xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto"
             >
-              Siap Memulai Perjalanan Ilmu yang Berkah?
+              Awali perjalanan ilmu yang bermakna
             </h2>
             <p class="text-xl text-primary-light max-w-2xl mx-auto">
               Mari bergabung menjadi bagian dari keluarga besar Pondok Pesantren
@@ -426,5 +482,22 @@ const facilities = [
 
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Carousel Fade Transition */
+.fade-enter-active,
+.fade-leave-active {
+  transition:
+    opacity 1.5s ease-in-out,
+    transform 10s ease-out;
+}
+
+.fade-enter-from {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
