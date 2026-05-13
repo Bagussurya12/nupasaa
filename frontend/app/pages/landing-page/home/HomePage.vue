@@ -197,7 +197,7 @@ const facilities = [
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div class="relative">
             <div
-              class="aspect-square rounded-3xl overflow-hidden shadow-2xl relative z-10 bg-white flex items-center justify-center"
+              class="aspect-square rounded-2xl overflow-hidden shadow-2xl relative z-10 bg-white flex items-center justify-center"
             >
               <img
                 src="/assets/nupasa-logo-remove.png"
@@ -389,7 +389,9 @@ const facilities = [
           <h2
             class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight"
           >
-            Lingkungan Belajar yang Kondusif
+            Lingkungan Belajar yang <span class="text-primary">Nyaman</span>
+            <br />
+            & Kondusif
           </h2>
         </div>
         <NuxtLink

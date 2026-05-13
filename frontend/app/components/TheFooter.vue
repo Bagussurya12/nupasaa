@@ -5,11 +5,11 @@
         <!-- Brand -->
         <div class="space-y-6">
           <div class="flex items-center gap-2">
-            <div
-              class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg"
-            >
-              NH
-            </div>
+            <img
+              src="/assets/nupasa-logo-remove.png"
+              alt="Nupasa Logo"
+              class="w-10 h-10 object-contain"
+            />
             <div class="flex flex-col">
               <span class="font-bold text-lg leading-tight">Nurul Hidayah</span>
               <span
@@ -232,9 +232,10 @@
       <div
         class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm"
       >
-        <p>
-          &copy; 2024 Ponpes Nurul Hidayah Parung Sapi. Hak Cipta Dilindungi.
-        </p>
+        <div class="flex justify-center items-center">
+          Developed by
+          <span class="font-bold text-primary ml-2">Soratech</span>
+        </div>
         <div class="flex gap-6">
           <a href="#" class="hover:text-white transition-colors"
             >Kebijakan Privasi</a
@@ -243,7 +244,14 @@
             >Syarat & Ketentuan</a
           >
         </div>
+        <p class="text-center">
+          &copy; {{ currentYear }} Nurul Hidayah Parung Sapi.
+        </p>
       </div>
     </div>
   </footer>
 </template>
+
+<script setup lang="ts">
+const currentYear = new Date().getFullYear();
+</script>
