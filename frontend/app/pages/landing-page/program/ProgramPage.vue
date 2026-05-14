@@ -5,81 +5,224 @@ definePageMeta({
 
 const corePrograms = [
   {
-    title: "Tahfidz Al-Qur'an",
-    subtitle: "Program Unggulan Hafalan 30 Juz",
+    title: "Kitab Kuning",
+    subtitle: "Kajian Kitab Kitab Kuning",
     description:
-      "Fokus pada kualitas bacaan (tahsin), kekuatan hafalan (mutqin), serta pemahaman makna ayat. Santri dibimbing secara intensif oleh pengajar bersanad.",
-    image:
-      "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?q=80&w=1200",
+      "Pendalaman turats (khazanah klasik Islam) melalui kajian kitab-kitab karya ulama salaf yang otoritatif, membentuk santri dengan pemahaman mendalam, pola pikir sistematis, serta akhlak yang terjaga dalam setiap aspek kehidupan.",
+    image: "/assets/program/alumni-group-1.jpg",
     features: [
-      "Sabaq, Sabqi, Manzil",
-      "Ujian Tasmi' 5-30 Juz",
-      "Program Itqan & Sanad",
-    ],
-  },
-  {
-    title: "Turots (Kitab Kuning)",
-    subtitle: "Kajian Literatur Klasik Islam",
-    description:
-      "Pendalaman kitab-kitab klasik karya ulama terdahulu dalam bidang Aqidah, Fiqh, Nahwu, Shorof, dan Akhlak guna mencetak santri yang berilmu dalam.",
-    image:
-      "https://images.unsplash.com/photo-1590076214537-17f7754bb50a?q=80&w=1200",
-    features: [
-      "Metode Sorogan & Bandongan",
-      "Kajian Fathul Qorib",
-      "Bahasa Arab Aktif",
+      "Aqidah & Tauhid",
+      "Fiqh & Ushul Fiqh",
+      "Akhlak",
+      "Tafsir & Ilmu Tafsir",
+      "Hadits & Ilmu Hadits",
+      "Nahwu",
+      "Shorof",
+      "Balaghah",
+      "Mantiq",
+      "Tajwid",
     ],
   },
   {
     title: "Pendidikan Formal",
-    subtitle: "SMP & SMA Terakreditasi",
+    subtitle: "MTs & MA Terakreditasi",
     description:
-      "Integrasi kurikulum pesantren dengan kurikulum nasional (Kemendikbud/Kemenag) untuk memastikan santri memiliki ijazah formal dan kompetensi akademik umum.",
+      "Menghadirkan pendidikan formal terakreditasi yang mengintegrasikan kurikulum pesantren dan nasional, membekali santri dengan pengetahuan akademik yang kuat, karakter yang matang, serta kesiapan menghadapi tantangan pendidikan dan kehidupan di masa depan.",
     image:
       "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200",
-    features: ["Ijazah Negara", "Persiapan Masuk PTN", "Ekskul Olimpiade"],
+    features: [
+      "Madrasah Tsanawiyah (MTs)",
+      "Madrasah Aliyah (MA)",
+      "Kurikulum Nasional & Pesantren",
+    ],
+  },
+  {
+    title: "Perguruan Tinggi Islam",
+    subtitle: "Sekolah Tinggi Agama Islam (STAI)",
+    description:
+      "Perpaduan harmonis antara kedalaman ilmu pesantren dan standar pendidikan nasional, menghadirkan generasi berilmu luas, berakhlak mulia, serta siap bersaing di dunia akademik maupun profesional.",
+    image:
+      "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200",
+    features: [
+      "S2 Pendidikan Agama Islam",
+      "S1 Ekonomi Syariah",
+      "S1 Hukum Ekonomi Syariah",
+      "S1 Manajemen Bisnis Syariah",
+      "S2 Pendidikan Agama Islam",
+    ],
   },
 ];
 
 const dailyRoutine = [
-  { time: "04:00 - 05:30", activity: "Shalat Shubuh & Zikir Pagi" },
-  { time: "05:30 - 07:00", activity: "Halaqah Tahfidz Pagi" },
-  { time: "07:30 - 12:00", activity: "Sekolah Formal & Madrasah" },
-  { time: "13:30 - 15:00", activity: "Istirahat & Qailullah" },
-  { time: "16:00 - 17:30", activity: "Ekstrakurikuler & Olahraga" },
-  { time: "18:30 - 20:30", activity: "Kajian Kitab & Halaqah Malam" },
-  { time: "21:00", activity: "Istirahat Malam" },
+  { time: "03:30 - 04:00", activity: "Qiyamul Lail" },
+  { time: "04:30 - 05:00", activity: "Shalat Shubuh & Zikir Pagi" },
+  {
+    time: "05:00 - 05:30",
+    activity: "Hafalan Al-Quran, Hadits, dan Kitab Kuning",
+  },
+  { time: "05:30 - 05:40", activity: "GSM (Kegiatan Kebersihan 10 Menit)" },
+  { time: "05:40 - 07:30", activity: "Pengajian Kitab Kuning Pagi" },
+  { time: "07:30 - 08:00", activity: "Sarapan & Persiapan Sekolah" },
+  { time: "08:00 - 11:30", activity: "Sekolah Formal & Madrasah" },
+  { time: "11:30 - 13:00", activity: "Sholat Dzuhur & Makan Siang" },
+  { time: "13:00 - 14:30", activity: "Sorogan Kitab Kuning" },
+  {
+    time: "14:30 - 15:00",
+    activity: "Istirahat dan Persiapan Sholat Ashar berjamaah",
+  },
+  {
+    time: "15:00 - 15:30",
+    activity: "Sholat Ashar berjamaah, dan dzikir sore",
+  },
+  {
+    time: "15:30 - 17:00",
+    activity: "Pengajian Kitab Kuning",
+  },
+  {
+    time: "17:00 - 18:00",
+    activity: "Istirahat dan Persiapan Sholat Maghrib berjamaah",
+  },
+  {
+    time: "18:00 - 18:30",
+    activity: "Sholat Maghrib berjamaah, dan dzikir",
+  },
+  {
+    time: "18:30 - 19:00",
+    activity: "Sorogan Al-Quran",
+  },
+  {
+    time: "19:00 - 19:30",
+    activity: "Sholat Isya Berjamaah & Dzikir",
+  },
+  {
+    time: "19:30 - 21:00",
+    activity: "Kajian Kitab & Halaqah Malam",
+  },
+  { time: "21:00 - 22:00", activity: "Hifdzul Kutub Bersama" },
+  { time: "22:00 - 03:00", activity: "Istirahat Malam" },
 ];
+
+const categories = [
+  "Semua",
+  "Keagamaan",
+  "Sains & Teknologi",
+  "Olahraga & Seni",
+  "Kepemimpinan",
+];
+const activeCategory = ref("Semua");
 
 const extras = [
   {
-    name: "Pramuka",
-    icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z",
+    name: "Tahsin Al-Quran",
+    category: "Keagamaan",
+    description:
+      "Pendalaman teknik membaca Al-Quran dengan tajwid yang benar dan tartil.",
+    icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
   },
-  { name: "Beladiri", icon: "M13 10V3L4 14h7v7l9-11h-7z" },
   {
     name: "Hadroh",
+    category: "Olahraga & Seni",
+    description:
+      "Seni musik Islami menggunakan rebana untuk mengiringi lantunan shalawat.",
     icon: "M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3",
   },
   {
-    name: "Jurnalistik",
-    icon: "M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z",
+    name: "Muhadharah",
+    category: "Keagamaan",
+    description:
+      "Latihan public speaking dan orasi dalam bahasa Arab, Inggris, dan Indonesia.",
+    icon: "M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z",
+  },
+  {
+    name: "Pencak Silat",
+    category: "Olahraga & Seni",
+    description:
+      "Olahraga bela diri tradisional untuk melatih fisik, mental, dan kedisiplinan.",
+    icon: "M13 10V3L4 14h7v7l9-11h-7z",
+  },
+  {
+    name: "Pramuka",
+    category: "Kepemimpinan",
+    description:
+      "Pembentukan karakter melalui kegiatan kepanduan dan ketangkasan alam terbuka.",
+    icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z",
+  },
+  {
+    name: "Paskibra",
+    category: "Kepemimpinan",
+    description:
+      "Pelatihan baris-berbaris untuk membentuk kedisiplinan dan rasa nasionalisme.",
+    icon: "M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9",
+  },
+  {
+    name: "Software Engineering",
+    category: "Sains & Teknologi",
+    description:
+      "Pembelajaran pemrograman web dan aplikasi untuk mencetak santri digital.",
+    icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4",
+  },
+  {
+    name: "Graphic Design",
+    category: "Sains & Teknologi",
+    description:
+      "Eksplorasi kreativitas visual menggunakan perangkat lunak desain modern.",
+    icon: "M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h14a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z",
+  },
+  {
+    name: "Robotic & IOT",
+    category: "Sains & Teknologi",
+    description:
+      "Inovasi teknologi melalui perakitan robot dan sistem otomatisasi cerdas.",
+    icon: "M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z",
+  },
+  {
+    name: "Mathematic & Science",
+    category: "Sains & Teknologi",
+    description:
+      "Klub peminatan untuk olimpiade sains dan pendalaman logika matematika.",
+    icon: "M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.691.31a2 2 0 00-1.1.88 2 2 0 00-.31 1.096l.124 2.478c.017.347.149.673.374.94a2 2 0 00.732.532c.326.126.677.173 1.019.138l2.478-.253a2 2 0 001.562-2.387l-.477-2.387zM9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z",
   },
 ];
+
+const filteredExtras = computed(() => {
+  if (activeCategory.value === "Semua") return extras;
+  return extras.filter((extra) => extra.category === activeCategory.value);
+});
+const currentProgramSlide = ref(0);
+const programCarouselImages = [
+  "/assets/program/alumni-group-1.jpg",
+  "/assets/program/paskibra-santriawati.jpg",
+  "/assets/program/paskibra.jpg",
+  "/assets/program/santriawati-group-1.jpg",
+  "/assets/program/seni-santriawan-2.jpg",
+  "/assets/program/seni-santriawan.jpg",
+];
+
+onMounted(() => {
+  setInterval(() => {
+    currentProgramSlide.value =
+      (currentProgramSlide.value + 1) % programCarouselImages.length;
+  }, 5000);
+});
 </script>
 
 <template>
   <div>
     <!-- Hero Section -->
     <section
-      class="relative h-[45vh] min-h-[350px] flex items-center justify-center overflow-hidden"
+      class="relative h-[55vh] min-h-[450px] flex items-center justify-center overflow-hidden"
     >
       <div class="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2340&auto=format&fit=crop"
-          alt="Programs Hero"
-          class="w-full h-full object-cover brightness-[0.3]"
-        />
+        <transition-group name="fade">
+          <img
+            v-for="(image, index) in programCarouselImages"
+            :key="image"
+            v-show="currentProgramSlide === index"
+            :src="image"
+            alt="Programs Hero"
+            class="absolute inset-0 w-full h-full object-cover brightness-[0.3]"
+          />
+        </transition-group>
         <div
           class="absolute inset-0 bg-gradient-to-r from-primary/70 to-transparent"
         ></div>
@@ -88,11 +231,6 @@ const extras = [
       <div
         class="container mx-auto px-4 relative z-10 text-center space-y-6 mt-20"
       >
-        <div
-          class="inline-block px-4 py-1.5 bg-secondary text-white rounded-full text-sm font-bold uppercase tracking-widest animate-fade-in shadow-lg"
-        >
-          Kurikulum Terpadu
-        </div>
         <h1
           class="text-4xl md:text-6xl font-bold text-white leading-tight animate-fade-in-up"
         >
@@ -238,49 +376,94 @@ const extras = [
     </section>
 
     <!-- Extracurriculars -->
-    <section class="py-24 bg-white">
-      <div class="container mx-auto px-4 md:px-6 text-center mb-16 space-y-4">
+    <section class="py-24 bg-gray-50/50">
+      <div class="container mx-auto px-4 md:px-6 text-center mb-16 space-y-6">
         <div
-          class="inline-block px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-bold uppercase tracking-widest"
+          class="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-bold uppercase tracking-widest"
         >
           Pengembangan Diri
         </div>
         <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
-          Ekstrakurikuler
+          Ekstrakurikuler & <span class="text-primary">Minat Bakat</span>
         </h2>
-        <p class="text-gray-500 max-w-2xl mx-auto">
-          Kami mengasah minat dan bakat santri melalui berbagai organisasi dan
-          klub hobi.
+        <p class="text-gray-500 max-w-2xl mx-auto text-lg font-light">
+          Kami menyediakan wadah yang luas bagi santri untuk mengeksplorasi
+          potensi diri, mengasah kreativitas, dan membangun jiwa kepemimpinan.
         </p>
+
+        <!-- Category Filter -->
+        <div class="flex flex-wrap justify-center gap-3 mt-10">
+          <button
+            v-for="cat in categories"
+            :key="cat"
+            @click="activeCategory = cat"
+            class="px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300"
+            :class="
+              activeCategory === cat
+                ? 'bg-primary text-white shadow-lg scale-105'
+                : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
+            "
+          >
+            {{ cat }}
+          </button>
+        </div>
       </div>
 
-      <div class="container mx-auto px-4 md:px-6">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          <div
-            v-for="extra in extras"
-            :key="extra.name"
-            class="bg-gray-50 rounded-[2rem] p-10 text-center hover:bg-primary hover:text-white transition-all duration-300 group cursor-pointer shadow-sm"
-          >
+      <div class="container mx-auto px-4 md:px-6 min-h-[600px]">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+        >
+          <transition-group name="list">
             <div
-              class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md group-hover:bg-white/20"
+              v-for="extra in filteredExtras"
+              :key="extra.name"
+              class="group relative bg-white rounded-[2.5rem] p-8 transition-all duration-500 hover:-translate-y-2 border border-gray-100 shadow-sm hover:shadow-2xl overflow-hidden"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-8 w-8 text-primary group-hover:text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  :d="extra.icon"
-                />
-              </svg>
+              <!-- Decorative element -->
+              <div
+                class="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full group-hover:bg-primary/10 transition-colors"
+              ></div>
+
+              <div class="relative z-10">
+                <div
+                  class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-500"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-8 w-8 text-primary group-hover:text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      :d="extra.icon"
+                    />
+                  </svg>
+                </div>
+
+                <div class="mb-4">
+                  <span
+                    class="text-[10px] font-bold text-primary uppercase tracking-wider bg-primary/5 px-3 py-1 rounded-full border border-primary/10"
+                  >
+                    {{ extra.category }}
+                  </span>
+                </div>
+
+                <h4
+                  class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors"
+                >
+                  {{ extra.name }}
+                </h4>
+
+                <p class="text-gray-500 leading-relaxed font-light text-sm">
+                  {{ extra.description }}
+                </p>
+              </div>
             </div>
-            <h4 class="text-xl font-bold">{{ extra.name }}</h4>
-          </div>
+          </transition-group>
         </div>
       </div>
     </section>
@@ -350,5 +533,34 @@ const extras = [
 
 .animate-fade-in {
   animation: fadeIn 1s ease-out forwards;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition:
+    opacity 2s ease-in-out,
+    transform 2s ease-out;
+}
+
+.fade-enter-from {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.fade-leave-to {
+  opacity: 0;
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: scale(0.9) translateY(20px);
+}
+.list-move {
+  transition: transform 0.5s ease;
 }
 </style>

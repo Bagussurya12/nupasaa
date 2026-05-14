@@ -113,11 +113,6 @@
               >
             </li>
             <li>
-              <a href="/#berita" class="hover:text-primary transition-colors"
-                >Berita & Kegiatan</a
-              >
-            </li>
-            <li>
               <a href="/facility" class="hover:text-primary transition-colors"
                 >Sarana & Fasilitas</a
               >
@@ -161,8 +156,8 @@
                 />
               </svg>
               <span
-                >Jl. Parung Sapi No. 123, Kec. Jasinga, Kab. Bogor, Jawa
-                Barat</span
+                >Jl. Raya Parung Sapi, Kalongsawah, Kec. Jasinga, Kabupaten
+                Bogor, Jawa Barat 16670</span
               >
             </li>
             <li class="flex gap-3 items-center">
@@ -180,7 +175,7 @@
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              <span>(021) 1234 5678</span>
+              <span>0856-1025-891</span>
             </li>
             <li class="flex gap-3 items-center">
               <svg
@@ -197,7 +192,7 @@
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              <span>info@nurulhidayah.sch.id</span>
+              <span>info@nupasa.sch.id</span>
             </li>
           </ul>
         </div>
