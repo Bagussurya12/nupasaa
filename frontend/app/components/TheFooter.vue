@@ -19,8 +19,7 @@
             </div>
           </div>
           <p class="text-gray-400 leading-relaxed">
-            Mencetak generasi rabbani yang beraqidah lurus, berakhlak mulia, dan
-            berwawasan luas sesuai manhaj Salafush Shalih.
+            Membentuk Cendikiawan Muslim untuk Peradaban Modern.
           </p>
           <div class="flex gap-4">
             <a

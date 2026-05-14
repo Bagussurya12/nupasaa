@@ -38,22 +38,19 @@ const history = [
 
 const leaders = [
   {
-    name: "KH. M.Ibnu Majah",
+    name: "KH. Muhammad Ibnu Majah",
     role: "Pimpinan Pondok Pesantren",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&fit=crop",
+    image: "/assets/profile/aa.jpg",
   },
   {
-    name: "K.Babang Syarif, S.Pd.I.",
-    role: "Kepala Kesantrian",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&fit=crop",
+    name: "K.Babang Muhammad Syarif, S.Pd.I",
+    role: "Kepala Sekolah & Kesantrian",
+    image: "/assets/profile/Ka-babang.jpeg",
   },
   {
-    name: "Ustadzah Siti Aminah",
+    name: "Ustadzah Mariatul Qibtiyah, S.Pd.I",
     role: "Kepala Keputrian",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&fit=crop",
+    image: "/assets/profile/teh-kiki.jpg",
   },
 ];
 </script>
@@ -93,6 +90,71 @@ const leaders = [
           Dedikasi sepenuh hati dalam melahirkan generasi unggul—cerdas dalam
           berpikir, kuat dalam iman, dan teguh dalam aqidah.
         </p>
+      </div>
+    </section>
+
+    <!-- About Section / Highlight -->
+    <section class="py-20 md:py-32 bg-gray-50/50 relative overflow-hidden">
+      <!-- Decorative background -->
+      <div
+        class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"
+      ></div>
+
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-4xl mx-auto text-center space-y-10">
+          <div
+            class="inline-block px-4 py-1.5 bg-secondary/10 text-secondary rounded-full text-sm font-bold uppercase tracking-[0.2em] animate-fade-in"
+          >
+            Nilai & Khidmat
+          </div>
+          <h2
+            class="text-3xl md:text-5xl font-bold text-gray-900 leading-tight"
+          >
+            Berdiri Sejak 1993, <br class="hidden md:block" />
+            <span class="text-primary">Berkhidmat untuk Umat</span>.
+          </h2>
+          <div class="relative px-4 md:px-12">
+            <div
+              class="absolute -left-2 top-0 bottom-0 w-1.5 bg-secondary rounded-full hidden md:block"
+            ></div>
+            <p
+              class="text-xl md:text-2xl text-gray-700 leading-relaxed font-light italic"
+            >
+              Didirikan oleh Almarhum Almaghfurlah
+              <span class="font-bold text-gray-900">KH. Bukhori Muslim</span>
+              dan
+              <span class="font-bold text-gray-900"
+                >Ustadzah Hj. Eneng Maspufah</span
+              >
+              atas restu guru beliau,
+              <span class="font-bold text-gray-900">Mama KH. Uqon Bulqoeni</span
+              >, kami hadir sebagai mercusuar pendidikan Islam di wilayah
+              Parungsapi.
+            </p>
+            <div class="mt-8">
+              <p
+                class="text-lg md:text-xl text-gray-600 leading-relaxed font-light"
+              >
+                Kini, di bawah kepemimpinan
+                <span class="font-bold text-primary"
+                  >KH. Muhammad Ibnu Majah</span
+                >, Pondok Pesantren Nurul Hidayah terus berkembang menjadi
+                lembaga yang mencetak cendikiawan muslim modern tanpa
+                meninggalkan nilai-nilai luhur kepesantrenan.
+              </p>
+            </div>
+          </div>
+          <div class="flex justify-center pt-8">
+            <div class="flex gap-2">
+              <div class="w-12 h-1 bg-primary rounded-full"></div>
+              <div class="w-4 h-1 bg-secondary rounded-full"></div>
+              <div class="w-12 h-1 bg-primary rounded-full"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

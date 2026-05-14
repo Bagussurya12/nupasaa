@@ -121,8 +121,8 @@ const facilities = [
             Pendaftaran Santri Baru TA 2026/2027 Telah Dibuka
           </div>
           <h1 class="text-5xl md:text-7xl font-bold leading-tight">
-            Membentuk Generasi
-            <span class="text-secondary">Rabbani</span> Berakhlakul Karimah
+            Membentuk Cendikiawan
+            <span class="text-secondary">Muslim</span> untuk Peradaban Modern.
           </h1>
           <p class="text-xl text-gray-200 leading-relaxed max-w-2xl">
             Pondok Pesantren Nurul Hidayah Cabang Parung Sapi berkomitmen
