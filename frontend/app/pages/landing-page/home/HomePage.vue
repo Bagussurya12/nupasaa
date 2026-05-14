@@ -12,18 +12,18 @@ const stats = [
 ];
 
 const carouselImages = [
-  "/assets/home-carousel/keluarga-1.jpg",
-  "/assets/home-carousel/alumni-group-1.jpg",
-  "/assets/home-carousel/foto-silat.jpg",
-  "/assets/home-carousel/santriawan-group-1.jpg",
-  "/assets/home-carousel/santriawati-group-1.jpg",
-  "/assets/home-carousel/santriawan-group-2.jpg",
-  "/assets/home-carousel/santriawati-group-2.jpg",
-  "/assets/home-carousel/santriawan-group-3.jpg",
-  "/assets/home-carousel/santriawati-group-3.jpg",
-  "/assets/home-carousel/santriawan-group-4.jpg",
-  "/assets/home-carousel/santriawati-person-1.jpg",
-  "/assets/home-carousel/santriwati-person-2.jpg",
+  "/assets/home-carousel/compressed-keluarga-1.jpg",
+  "/assets/home-carousel/compressed-alumni-group-1.jpg",
+  "/assets/home-carousel/compressed-foto-silat.jpg",
+  "/assets/home-carousel/compressed-santriawan-group-1.jpg",
+  "/assets/home-carousel/compressed-santriawati-group-1.jpg",
+  "/assets/home-carousel/compressed-santriawan-group-2.jpg",
+  "/assets/home-carousel/compressed-santriawati-group-2.jpg",
+  "/assets/home-carousel/compressed-santriawan-group-3.jpg",
+  "/assets/home-carousel/compressed-santriawati-group-3.jpg",
+  "/assets/home-carousel/compressed-santriawan-group-4.jpg",
+  "/assets/home-carousel/compressed-santriawati-person-1.jpg",
+  "/assets/home-carousel/compressed-santriwati-person-2.jpg",
 ];
 
 const currentSlide = ref(0);
