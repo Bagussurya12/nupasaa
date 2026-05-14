@@ -4,14 +4,13 @@ definePageMeta({
 });
 
 const visi =
-  "Membentuk Cendekiawan Islam ahlussunah wal jama'ah yang berwawasan agama yang mendalam & berpengetahuan modern";
+  "Menjadikan insan yang berpendidikan ilmu agama dan ilmu pengetahuan umum serta membentuk cendikiawan muslim yang mampu membawa agama ,bangsa dan negara kepada perdaban yang modern dan menjunjung tinggi nilai-nilai keislaman.";
 const misi = [
-  "Berpengetahuan agama",
-  "Berakhlakul Karimah",
-  "Memiliki Kemandirian & Jiwa Kepemimpinan",
-  "Mampu bersaing disegala bidang",
-  "Berwawasan Modern & Islami",
-  "Berpikir visioner, melangkah lebih maju menuju masa depan gemilang.",
+  "Menyelenggarakan pendidikan ilmu-ilmu agama secara sistematis, berkelanjutan dan berbasis kompetensi berlandasarkan semangat al-Qur’an",
+  "Membangun tradisi kesalehan dalam seluruh aspek kegiatan santri",
+  "Membangun karakter kepemimpinan santri dan membangkitkan kebangga-an sebagai muslim serta kecintaan kepada al-Qur’an dan ilmu agama",
+  "Membangun tradisi keunggulan melalui penguasaan teknologi dan tradisi keilmuan modern;",
+  "Memberikan bekal pengetahuan dan keterampilan berbasis keislaman",
 ];
 
 const history = [
@@ -93,7 +92,7 @@ const leaders = [
       </div>
     </section>
 
-    <!-- About Section / Highlight -->
+    <!-- Sejarah Singkat Section -->
     <section class="py-20 md:py-32 bg-gray-50/50 relative overflow-hidden">
       <!-- Decorative background -->
       <div
@@ -104,54 +103,120 @@ const leaders = [
       ></div>
 
       <div class="container mx-auto px-6 relative z-10">
-        <div class="max-w-4xl mx-auto text-center space-y-10">
-          <div
-            class="inline-block px-4 py-1.5 bg-secondary/10 text-secondary rounded-full text-sm font-bold uppercase tracking-[0.2em] animate-fade-in"
-          >
-            Nilai & Khidmat
-          </div>
-          <h2
-            class="text-3xl md:text-5xl font-bold text-gray-900 leading-tight"
-          >
-            Berdiri Sejak 1993, <br class="hidden md:block" />
-            <span class="text-primary">Berkhidmat untuk Umat</span>.
-          </h2>
-          <div class="relative px-4 md:px-12">
-            <div
-              class="absolute -left-2 top-0 bottom-0 w-1.5 bg-secondary rounded-full hidden md:block"
-            ></div>
-            <p
-              class="text-xl md:text-2xl text-gray-700 leading-relaxed font-light italic"
-            >
-              Didirikan oleh Almarhum Almaghfurlah
-              <span class="font-bold text-gray-900">KH. Bukhori Muslim</span>
-              dan
-              <span class="font-bold text-gray-900"
-                >Ustadzah Hj. Eneng Maspufah</span
+        <div class="max-w-6xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+              <div class="space-y-4">
+                <div
+                  class="inline-block px-4 py-1.5 bg-secondary/10 text-secondary rounded-full text-sm font-bold uppercase tracking-[0.2em] animate-fade-in"
+                >
+                  Sejarah Singkat
+                </div>
+                <h2
+                  class="text-3xl md:text-5xl font-bold text-gray-900 leading-tight"
+                >
+                  Semangat <span class="text-primary">Dakwah</span> &
+                  <span class="text-secondary">Pengabdian</span>
+                </h2>
+              </div>
+
+              <div class="space-y-6 text-gray-700 leading-relaxed text-lg">
+                <p>
+                  Pondok Pesantren Nurul Hidayah Parungsapi merupakan cabang
+                  dari Pondok Pesantren Nurul Hidayah Leuwisadeng yang berdiri
+                  atas semangat dakwah dan pengabdian. Pesantren ini didirikan
+                  pada tahun
+                  <span class="font-bold">1993</span> oleh
+                  <span class="font-bold text-gray-900"
+                    >Almarhum Almaghfurlah KH. Bukhori Muslim</span
+                  >
+                  bersama istri beliau,
+                  <span class="font-bold text-gray-900"
+                    >Ustadzah Hj. Eneng Maspufah</span
+                  >, atas perintah serta doa restu dari guru beliau,
+                  <span class="font-bold text-gray-900"
+                    >Almarhum Almaghfurlah KH. Uqon Bulqoeni</span
+                  >, pendiri Pondok Pesantren Nurul Hidayah Pusat.
+                </p>
+                <p>
+                  Berdirinya pesantren ini tidak lepas dari ketaatan dan
+                  kecintaan beliau kepada sang guru. Atas arahan untuk membangun
+                  pesantren di wilayah antara Leuwiliang dan Jasinga, KH.
+                  Bukhori Muslim memulai pencarian lokasi yang tepat, didampingi
+                  oleh putra guru beliau,
+                  <span class="font-bold text-gray-900"
+                    >Almarhum Almaghfurlah KH. Syafiqul Kholqi</span
+                  >.
+                </p>
+              </div>
+            </div>
+
+            <div class="relative group">
+              <div
+                class="absolute -inset-4 bg-primary/10 rounded-[3rem] blur-2xl group-hover:blur-3xl transition-all duration-500"
+              ></div>
+              <div
+                class="relative bg-white p-4 rounded-[3rem] shadow-2xl border border-gray-100 overflow-hidden"
               >
-              atas restu guru beliau,
-              <span class="font-bold text-gray-900">Mama KH. Uqon Bulqoeni</span
-              >, kami hadir sebagai mercusuar pendidikan Islam di wilayah
-              Parungsapi.
-            </p>
-            <div class="mt-8">
-              <p
-                class="text-lg md:text-xl text-gray-600 leading-relaxed font-light"
-              >
-                Kini, di bawah kepemimpinan
-                <span class="font-bold text-primary"
-                  >KH. Muhammad Ibnu Majah</span
-                >, Pondok Pesantren Nurul Hidayah terus berkembang menjadi
-                lembaga yang mencetak cendikiawan muslim modern tanpa
-                meninggalkan nilai-nilai luhur kepesantrenan.
-              </p>
+                <img
+                  src="/assets/profile/abah-profile.jpg"
+                  alt="Sejarah Pesantren"
+                  class="rounded-[2.5rem] w-full object-cover aspect-[4/5] brightness-90 group-hover:brightness-100 transition-all duration-500"
+                />
+                <div
+                  class="absolute bottom-10 left-10 right-10 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-all duration-500"
+                >
+                  <p class="text-gray-600 italic font-light">
+                    "Menjaga nilai keikhlasan dan pengabdian demi mencetak
+                    generasi rabbani yang relevan dengan zaman."
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="flex justify-center pt-8">
-            <div class="flex gap-2">
-              <div class="w-12 h-1 bg-primary rounded-full"></div>
-              <div class="w-4 h-1 bg-secondary rounded-full"></div>
-              <div class="w-12 h-1 bg-primary rounded-full"></div>
+
+          <div
+            class="mt-16 bg-white p-8 md:p-12 rounded-[3rem] shadow-sm border border-gray-100 space-y-8"
+          >
+            <div class="space-y-6 text-gray-700 leading-relaxed text-lg">
+              <p>
+                Melalui proses musyawarah, istikharah, dan petunjuk para guru,
+                akhirnya dipilihlah sebuah lahan di
+                <span class="font-bold text-gray-900"
+                  >Kp. Parungsapi, Tipar, Desa Sipak, Kecamatan Jasinga</span
+                >
+                sebagai tempat berdirinya pesantren ini. Dengan penuh
+                keikhlasan, beliau dan keluarga hijrah dari kampung halaman di
+                Nanggewer, Cibinong menuju Desa Sipak, memulai perjuangan dari
+                nol dengan membangun pondok sederhana berdampingan dengan
+                kediaman.
+              </p>
+              <p>
+                Pada masa awal, pesantren ini hanya memiliki empat orang santri
+                yang diamanahkan langsung oleh guru beliau. Namun, seiring
+                waktu, jumlah santri terus berkembang hingga menjadi lembaga
+                pendidikan yang memberikan manfaat luas bagi masyarakat.
+              </p>
+              <p>
+                Kini, estafet perjuangan tersebut dilanjutkan oleh putra beliau,
+                <span class="font-bold text-primary"
+                  >KH. Muhammad Ibnu Majah</span
+                >, yang terus menjaga nilai-nilai keilmuan, keikhlasan, dan
+                pengabdian, sekaligus mengembangkan pesantren agar tetap relevan
+                dengan kebutuhan zaman tanpa meninggalkan akar tradisi keislaman
+                yang kokoh.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-4">
+              <div
+                class="flex items-center gap-3 bg-secondary/10 px-6 py-3 rounded-full"
+              >
+                <span class="w-2 h-2 bg-secondary rounded-full"></span>
+                <span
+                  class="text-secondary font-bold text-sm uppercase tracking-wider"
+                  >Est. 1993</span
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -263,11 +328,6 @@ const leaders = [
               </h2>
             </div>
             <div class="space-y-4 md:space-y-6">
-              <p
-                class="text-xl md:text-2xl text-white/90 font-medium italic mb-4"
-              >
-                Membentuk generasi Islam yang:
-              </p>
               <div
                 v-for="(item, index) in misi"
                 :key="index"

@@ -9,7 +9,7 @@ const corePrograms = [
     subtitle: "Kajian Kitab Kitab Kuning",
     description:
       "Pendalaman turats (khazanah klasik Islam) melalui kajian kitab-kitab karya ulama salaf yang otoritatif, membentuk santri dengan pemahaman mendalam, pola pikir sistematis, serta akhlak yang terjaga dalam setiap aspek kehidupan.",
-    image: "/assets/program/alumni-group-1.jpg",
+    image: "/assets/program/kitab-kuning.jpg",
     features: [
       "Aqidah & Tauhid",
       "Fiqh & Ushul Fiqh",
@@ -101,6 +101,11 @@ const dailyRoutine = [
   { time: "21:00 - 22:00", activity: "Hifdzul Kutub Bersama" },
   { time: "22:00 - 03:00", activity: "Istirahat Malam" },
 ];
+const showAllRoutine = ref(false);
+const displayedRoutine = computed(() => {
+  if (showAllRoutine.value) return dailyRoutine;
+  return dailyRoutine.slice(0, 10);
+});
 
 const categories = [
   "Semua",
@@ -335,7 +340,7 @@ onMounted(() => {
             </p>
             <div class="pt-8">
               <img
-                src="https://images.unsplash.com/photo-1542621334-a254cf47733d?q=80&w=800"
+                src="/assets/program/kegiatan-santri.jpg"
                 alt="Routine Image"
                 class="rounded-[2.5rem] grayscale opacity-50 border border-white/10"
               />
@@ -347,12 +352,12 @@ onMounted(() => {
           >
             <div class="space-y-8">
               <div
-                v-for="item in dailyRoutine"
+                v-for="item in displayedRoutine"
                 :key="item.time"
                 class="flex gap-8 group"
               >
                 <div
-                  class="text-primary-light font-bold min-w-[120px] pt-1 group-hover:text-secondary transition-colors"
+                  class="text-primary-light font-bold min-w-[120px] pt-1 group-hover:text-secondary transition-colors text-sm md:text-base"
                 >
                   {{ item.time }}
                 </div>
@@ -363,11 +368,38 @@ onMounted(() => {
                     class="absolute -left-[5px] top-2 w-2 h-2 bg-primary rounded-full group-hover:scale-150 transition-transform"
                   ></div>
                   <h4
-                    class="text-lg font-bold text-gray-200 group-hover:text-white transition-colors"
+                    class="text-base md:text-lg font-bold text-gray-200 group-hover:text-white transition-colors"
                   >
                     {{ item.activity }}
                   </h4>
                 </div>
+              </div>
+
+              <!-- See More Button -->
+              <div class="pt-4 flex justify-center lg:justify-start">
+                <button
+                  @click="showAllRoutine = !showAllRoutine"
+                  class="flex items-center gap-2 text-primary-light hover:text-secondary font-bold transition-all group"
+                >
+                  <span>{{
+                    showAllRoutine ? "Lihat Lebih Sedikit" : "Lihat Selengkapnya"
+                  }}</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 transition-transform duration-300"
+                    :class="{ 'rotate-180': showAllRoutine }"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
               </div>
             </div>
           </div>

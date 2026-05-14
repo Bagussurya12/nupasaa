@@ -130,7 +130,8 @@ const facilities = [
             agama yang mendalam & berpengetahuan modern
           </p>
           <div class="flex flex-col sm:flex-row gap-4 pt-4">
-            <button
+            <NuxtLink
+              to="/profile"
               class="bg-secondary hover:bg-secondary-dark text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl hover:shadow-secondary/20 flex items-center justify-center gap-2"
             >
               Pelajari Lebih Lanjut
@@ -148,7 +149,7 @@ const facilities = [
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </button>
+            </NuxtLink>
           </div>
         </div>
 

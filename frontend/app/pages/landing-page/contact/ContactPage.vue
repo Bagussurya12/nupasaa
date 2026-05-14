@@ -7,7 +7,7 @@ const contactInfo = [
   {
     title: "Alamat",
     description:
-      "Jl. Raya Parung Sapi, Kalongsawah, Kec. Jasinga, Kabupaten Bogor, Jawa Barat 16670",
+      "Jl. Raya Parung Sapi, Sipak, Kec. Jasinga, Kabupaten Bogor, Jawa Barat 16670",
     icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z",
     color: "bg-blue-50 text-blue-600",
     link: "https://www.google.com/maps/dir//Pondok+Pesantren+Nurul+Hidayah+Parung+Sapi,+Kalongsawah,+Jasinga,+Bogor+Regency,+West+Java+16670",
@@ -85,13 +85,15 @@ const faqs = reactive([
     isOpen: false,
   },
   {
-    question: "Kurikulum seperti apa yang diterapkan dalam sistem pendidikannya?",
+    question:
+      "Kurikulum seperti apa yang diterapkan dalam sistem pendidikannya?",
     answer:
       'Pesantren ini menerapkan "Kurikulum Tujuh Tahun", di mana santri diharapkan menempuh pendidikan minimal selama tujuh tahun untuk menguasai berbagai tingkatan kitab. Sistem pendidikannya menggunakan manhaj Salafussolih dan Ahlusunnah wal jama\'ah dengan fokus pada pendalaman kitab kuning melalui metode seperti Sorogan, Bandongan, dan Hafalan.',
     isOpen: false,
   },
   {
-    question: "Apa keunggulan dan prestasi yang pernah diraih oleh pesantren ini?",
+    question:
+      "Apa keunggulan dan prestasi yang pernah diraih oleh pesantren ini?",
     answer:
       "Keunggulan utamanya adalah santri dibekali kemampuan membaca kitab kuning, penguasaan bahasa asing (Arab dan Inggris), serta tidak tertinggal dalam dunia teknologi (digital). Dalam hal prestasi, pesantren ini berhasil meraih gelar Juara Umum bidang MQK (Musabaqah Qira'atil Kutub) tingkat Kabupaten Bogor pada tahun 2024 dan meraih Juara 2 pada tahun 2026 dengan menjuarai berbagai kategori lomba kitab.",
     isOpen: false,

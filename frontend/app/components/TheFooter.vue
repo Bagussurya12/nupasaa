@@ -155,8 +155,8 @@
                 />
               </svg>
               <span
-                >Jl. Raya Parung Sapi, Kalongsawah, Kec. Jasinga, Kabupaten
-                Bogor, Jawa Barat 16670</span
+                >Jl. Raya Parung Sapi, Sipak, Kec. Jasinga, Kabupaten Bogor,
+                Jawa Barat 16670</span
               >
             </li>
             <li class="flex gap-3 items-center">
