@@ -42,6 +42,11 @@ const leaders = [
     image: "/assets/profile/aa.jpg",
   },
   {
+    name: "Ustadzah Hj. Eneng Maspufah",
+    role: "Pengasuh Pondok Pesantren",
+    image: "/assets/profile/ema-1.jpg",
+  },
+  {
     name: "K.Babang Muhammad Syarif, S.Pd.I",
     role: "Kepala Sekolah & Kesantrian",
     image: "/assets/profile/Ka-babang.jpeg",
@@ -50,6 +55,11 @@ const leaders = [
     name: "Ustadzah Mariatul Qibtiyah, S.Pd.I",
     role: "Kepala Keputrian",
     image: "/assets/profile/teh-kiki.jpg",
+  },
+  {
+    name: "Ustadzah Dewi muyassaroh ",
+    role: "Sekertaris Kelembagaan",
+    image: "/assets/profile/teh-dewi.jpg",
   },
 ];
 </script>
@@ -229,7 +239,8 @@ const leaders = [
         <div class="max-w-5xl mx-auto">
           <div class="text-center mb-12 md:mb-20 space-y-4">
             <h2 class="text-3xl md:text-5xl font-bold text-gray-900">
-              Sejarah & Perjalanan
+              <span class="text-primary">Sejarah</span> &
+              <span class="text-secondary">Perjalanan</span>
             </h2>
             <div class="w-20 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
@@ -372,11 +383,11 @@ const leaders = [
       </div>
 
       <div class="container mx-auto px-6">
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        <div class="flex flex-wrap justify-center gap-8 md:gap-10">
           <div
             v-for="leader in leaders"
             :key="leader.name"
-            class="bg-white rounded-[2.5rem] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.1)] transition-all duration-500 group"
+            class="bg-white rounded-[2.5rem] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.1)] transition-all duration-500 group w-full sm:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.75rem)] max-w-[400px]"
           >
             <div class="aspect-[4/5] overflow-hidden relative">
               <img

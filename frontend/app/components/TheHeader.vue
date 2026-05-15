@@ -3,7 +3,7 @@ const isMenuOpen = ref(false);
 const scrolled = ref(false);
 
 const navLinks = [
-  { name: "Home", href: "/" },
+  { name: "Beranda", href: "/" },
   { name: "Profil", href: "/profile" },
   { name: "Program", href: "/program" },
   { name: "Fasilitas", href: "/facility" },
@@ -50,7 +50,9 @@ onMounted(() => {
             <span
               :class="[
                 'text-xs font-medium uppercase tracking-[0.2em]',
-                scrolled ? 'text-primary md:text-secondary' : 'text-primary md:text-white/80',
+                scrolled
+                  ? 'text-primary md:text-secondary'
+                  : 'text-primary md:text-white/80',
               ]"
               >Parung Sapi</span
             >

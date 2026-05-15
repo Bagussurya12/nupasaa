@@ -6,8 +6,8 @@ definePageMeta({
 
 const stats = [
   { label: "Santri Aktif", value: "300+" },
-  { label: "Tenaga Pengajar", value: "10+" },
-  { label: "Program Ekstrakurikuler", value: "5+" },
+  { label: "Tenaga Pengajar", value: "14+" },
+  { label: "Program Ekstrakurikuler", value: "6+" },
   { label: "Tahun Berdiri", value: "1993" },
 ];
 
@@ -66,7 +66,7 @@ const programs = [
 
 const facilities = [
   {
-    name: "Masjid Jami'",
+    name: "Masjid Jami Aisyah",
     image: "/assets/home-facilities/masjid.JPG",
   },
   {
@@ -171,9 +171,11 @@ const facilities = [
 
       <!-- Floating Stats -->
       <div
-        class="absolute bottom-12 left-1/2 -translate-x-1/2 w-full max-w-5xl px-4 hidden lg:block"
+        class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-full max-w-5xl px-4 hidden lg:block z-20"
       >
-        <div class="bg-white rounded-2xl shadow-2xl p-8 grid grid-cols-4 gap-8">
+        <div
+          class="bg-white rounded-2xl shadow-2xl p-8 grid grid-cols-4 gap-8 border border-gray-100"
+        >
           <div
             v-for="stat in stats"
             :key="stat.label"
@@ -193,7 +195,7 @@ const facilities = [
     </section>
 
     <!-- About Section -->
-    <section id="profil" class="py-24 bg-white">
+    <section id="profil" class="py-24 bg-white mt-20">
       <div class="container mx-auto px-4 md:px-6">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div class="relative">
@@ -201,7 +203,7 @@ const facilities = [
               class="aspect-square rounded-2xl overflow-hidden shadow-2xl relative z-10 bg-white flex items-center justify-center"
             >
               <img
-                src="/assets/nupasa-logo-remove.png"
+                src="/assets/nupasa-new-logo.jpeg"
                 alt="About Pesantren"
                 class="w-full h-full object-contain p-4"
               />

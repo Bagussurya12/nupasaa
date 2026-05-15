@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-gray-900 text-white pt-20 pb-10">
     <div class="container mx-auto px-4 md:px-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-12 mb-16">
         <!-- Brand -->
         <div class="space-y-6">
           <div class="flex items-center gap-2">
@@ -120,6 +120,51 @@
               <a href="/contact" class="hover:text-primary transition-colors"
                 >Hubungi Kami</a
               >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Portals -->
+        <div>
+          <h4 class="font-bold text-lg mb-8 relative">
+            Portal Layanan
+            <span
+              class="absolute -bottom-2 left-0 w-12 h-1 bg-primary rounded-full"
+            ></span>
+          </h4>
+          <ul class="space-y-4 text-gray-400">
+            <li>
+              <a
+                href="/landing-page/portal/portal-alumni"
+                class="hover:text-primary transition-colors flex items-center gap-2 group"
+              >
+                <span
+                  class="w-1.5 h-1.5 bg-primary rounded-full group-hover:scale-150 transition-transform"
+                ></span>
+                Portal Alumni
+              </a>
+            </li>
+            <li>
+              <a
+                href="/landing-page/portal/siak-portal"
+                class="hover:text-primary transition-colors flex items-center gap-2 group"
+              >
+                <span
+                  class="w-1.5 h-1.5 bg-primary rounded-full group-hover:scale-150 transition-transform"
+                ></span>
+                SIAK (Akademik)
+              </a>
+            </li>
+            <li>
+              <a
+                href="/landing-page/portal/spsb-portal"
+                class="hover:text-primary transition-colors flex items-center gap-2 group"
+              >
+                <span
+                  class="w-1.5 h-1.5 bg-primary rounded-full group-hover:scale-150 transition-transform"
+                ></span>
+                SPSB (Pendaftaran)
+              </a>
             </li>
           </ul>
         </div>
