@@ -28,8 +28,7 @@ const corePrograms = [
     subtitle: "MTs & MA Terakreditasi",
     description:
       "Menghadirkan pendidikan formal terakreditasi yang mengintegrasikan kurikulum pesantren dan nasional, membekali santri dengan pengetahuan akademik yang kuat, karakter yang matang, serta kesiapan menghadapi tantangan pendidikan dan kehidupan di masa depan.",
-    image:
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200",
+    image: "/assets/program/pendidikan-formal.jpeg",
     features: [
       "Madrasah Tsanawiyah (MTs)",
       "Madrasah Aliyah (MA)",
@@ -382,7 +381,9 @@ onMounted(() => {
                   class="flex items-center gap-2 text-primary-light hover:text-secondary font-bold transition-all group"
                 >
                   <span>{{
-                    showAllRoutine ? "Lihat Lebih Sedikit" : "Lihat Selengkapnya"
+                    showAllRoutine
+                      ? "Lihat Lebih Sedikit"
+                      : "Lihat Selengkapnya"
                   }}</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
