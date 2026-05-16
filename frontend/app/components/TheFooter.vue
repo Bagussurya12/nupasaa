@@ -112,6 +112,11 @@
               >
             </li>
             <li>
+              <a href="/prestasi" class="hover:text-primary transition-colors"
+                >Prestasi Santri</a
+              >
+            </li>
+            <li>
               <a href="/facility" class="hover:text-primary transition-colors"
                 >Sarana & Fasilitas</a
               >

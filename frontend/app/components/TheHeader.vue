@@ -6,6 +6,7 @@ const navLinks = [
   { name: "Beranda", href: "/" },
   { name: "Profil", href: "/profile" },
   { name: "Program", href: "/program" },
+  { name: "Prestasi", href: "/prestasi" },
   { name: "Fasilitas", href: "/facility" },
   { name: "Kontak", href: "/contact" },
 ];
