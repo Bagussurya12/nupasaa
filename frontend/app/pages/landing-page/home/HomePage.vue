@@ -77,12 +77,6 @@ const facilities = [
     name: "Lapangan Olahraga",
     image: "/assets/home-facilities/lapangan-olahraga.jpg",
   },
-  {
-    name: "Laboratorium Komputer",
-    image:
-      "https://images.unsplash.com/photo-1719159381981-1327b22aff9b?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    status: "Coming Soon",
-  },
 ];
 </script>
 
@@ -406,7 +400,7 @@ const facilities = [
       </div>
 
       <div class="container mx-auto px-4 md:px-6">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div
             v-for="facility in facilities"
             :key="facility.name"
