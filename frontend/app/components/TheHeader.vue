@@ -72,11 +72,12 @@ onMounted(() => {
           >
             {{ link.name }}
           </a>
-          <button
+          <NuxtLink
+            to="/register"
             class="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full font-semibold transition-all transform hover:scale-105 shadow-md"
           >
             Daftar Sekarang
-          </button>
+          </NuxtLink>
         </div>
 
         <!-- Mobile Menu Toggle -->
@@ -141,11 +142,13 @@ onMounted(() => {
           >
             {{ link.name }}
           </a>
-          <button
-            class="bg-primary text-white px-6 py-3 mx-5 rounded-xl font-semibold mt-2 shadow-lg active:scale-95 transition-transform"
+          <NuxtLink
+            to="/register"
+            @click="isMenuOpen = false"
+            class="bg-primary text-white px-6 py-3 mx-5 rounded-xl font-semibold mt-2 shadow-lg active:scale-95 transition-transform text-center"
           >
             Daftar Sekarang
-          </button>
+          </NuxtLink>
         </div>
       </div>
     </transition>

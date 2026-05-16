@@ -207,6 +207,169 @@ onMounted(() => {
       (currentProgramSlide.value + 1) % programCarouselImages.length;
   }, 5000);
 });
+
+const salafMethods = [
+  {
+    name: "Sorogan",
+    type: "Individual",
+    description: "Santri membaca kitab di hadapan ustadz/kyai secara personal. Ustadz memperbaiki bacaan, pemahaman, dan nahwu-sharaf secara intensif.",
+    icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
+  },
+  {
+    name: "Tahsin",
+    type: "Al-Quran",
+    description: "Teknik memperbaiki bacaan Al-Qur'an agar sesuai kaidah tajwid, berfokus pada makharijul huruf, sifat huruf, dan tartil.",
+    icon: "M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z",
+  },
+  {
+    name: "Bandongan",
+    type: "Klasikal",
+    description: "Kyai membaca dan menjelaskan isi kitab, sementara santri menyimak dan mencatat (memaknai) secara kolektif.",
+    icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+  },
+  {
+    name: "Hafalan",
+    type: "Tahfiz",
+    description: "Kewajiban menghafal nazham (bait syair) atau matan kitab tertentu, terutama ilmu alat seperti Nahwu dan Sharaf.",
+    icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
+  },
+  {
+    name: "Bathsul Masa'il",
+    type: "Diskusi",
+    description: "Forum diskusi ilmiah membahas masalah fiqih kontemporer berdasarkan kitab kuning untuk melatih analisis kritis.",
+    icon: "M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z",
+  },
+  {
+    name: "Halaqah",
+    type: "Lingkaran",
+    description: "Santri duduk melingkar menyimak pengajian kitab-kitab tasawuf atau fikih langsung dari Kyai.",
+    icon: "M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+  },
+];
+
+const specialMethods = [
+  {
+    name: "Metode Mubtadi (Nahwu & Shorof)",
+    description: "Menekankan praktik dan hafalan dengan nazhoman (syair) serta rumus. Memudahkan pemula membaca kitab dasar seperti Safinatunnaja dan Fathul Qorieb.",
+    features: ["Praktik Intensif", "Hafalan Nazhom", "Rumus Praktis", "Bertahap (Jilid)"],
+    icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
+  },
+  {
+    name: "Metode Mubtadi (Tajwid)",
+    description: "Fokus pada praktik makharijul huruf dan tajwid melalui syair dan rumus yang mempermudah pemahaman bagi santri pemula.",
+    features: ["Praktik Makharij", "Nazhom Tajwid", "Metode Cepat", "Latihan Terukur"],
+    icon: "M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3",
+  },
+];
+
+const curriculumYears = [
+  {
+    title: "Tahun Pertama",
+    tagline: "Pondasi Dasar & Adab",
+    hafalan: [
+      "Kitab Awamil",
+      "Tasrif Tsulasi Mujarrod",
+      "Do'a-do'a Harian",
+      "Ta'rif Dasar Nahwu",
+      "Lughoh Kitab Awamil",
+    ],
+    kemampuan: [
+      "Membaca Al-Qur’an tartil",
+      "Praktek ibadah harian",
+      "Melughot kitab kuning",
+      "Tasrif Tsulasi Mujarrod",
+    ],
+  },
+  {
+    title: "Tahun Kedua",
+    tagline: "Penguatan Alat & Tajwid",
+    hafalan: [
+      "Juz Amma (An-Nas - Adh-Dhuha)",
+      "Kitab Fat’hul Athfal",
+      "Kitab Jurumiyah",
+      "Ta’rifat Dasar Bab I",
+      "Tasrif Tsulasi Majid",
+    ],
+    kemampuan: [
+      "I’rob Kitab Awamil",
+      "Membaca Safinatunnajaa",
+      "Tasrif Tsulasi Majid",
+    ],
+  },
+  {
+    title: "Tahun Ketiga",
+    tagline: "Eskalasi Fiqh & Hadits",
+    hafalan: [
+      "Juz Amma (An-Naba - Al-Lail)",
+      "Kitab Imritiy",
+      "Matn Binaa",
+      "Hadits Arba’in",
+      "Tasrif Ruba’i",
+      "Dalil Tauhid",
+    ],
+    kemampuan: [
+      "I’rob Kitab Jurumiyah",
+      "Membaca Kitab Taqrieb",
+      "Tasrif Ruba’i",
+      "Dalil Aqli & Naqli Tauhid",
+    ],
+  },
+  {
+    title: "Tahun Keempat",
+    tagline: "Logika & Kedalaman Shorof",
+    hafalan: [
+      "Yasin & Surat Pilihan",
+      "Matn Hal Maqsud",
+      "Sulamul Munawwarok",
+      "Asal & Tasrif Bina",
+      "Ta’rifat Bab III",
+    ],
+    kemampuan: [
+      "I’rob Tizan Addarori",
+      "Membaca Riyadhul Badi’ah",
+      "Asal & Tasrif Bina Awal",
+    ],
+  },
+  {
+    title: "Tahun Kelima",
+    tagline: "Kematangan Literasi Turats",
+    hafalan: [
+      "Surat Pilihan 5",
+      "Zauhar Al-Maknun",
+      "Alfiyah (300 Bait)",
+      "Ta’rifat Mantiq",
+      "Asal & Tasrif Bina",
+    ],
+    kemampuan: [
+      "I’rob Mutammimah",
+      "Membaca Fathul Qorieb",
+      "Penguasaan Bina & Asal",
+    ],
+  },
+  {
+    title: "Tahun Keenam",
+    tagline: "Kemandirian & Pengabdian",
+    hafalan: [
+      "Surat Pilihan 6",
+      "Alfiyah (Khatam 1000 Bait)",
+      "Ta’rifat Balaghoh",
+    ],
+    kemampuan: ["Mengajar Sorogan (Awamil-Mutammimah)", "Membaca Fathul Mu’in"],
+  },
+  {
+    title: "Tahun Ketujuh",
+    tagline: "Puncak Kajian & Penjelasan",
+    hafalan: [
+      "Tikror Alfiyah & Kitab Alat",
+      "Review Hal Maqsud & Imritiy",
+      "Review Zauhar Al-Maknun",
+    ],
+    kemampuan: [
+      "Mengajar Sorogan I'rob Tingkat Lanjut",
+      "Menjelaskan Kitab-kitab Besar",
+    ],
+  },
+];
 </script>
 
 <template>
@@ -318,6 +481,237 @@ onMounted(() => {
             <div
               class="absolute -bottom-10 -right-10 w-64 h-64 bg-secondary/5 rounded-full -z-0"
             ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Methods Section -->
+    <section class="py-24 bg-gray-50">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="text-center mb-16 space-y-4">
+          <h3 class="text-primary font-bold tracking-widest uppercase text-sm">
+            Metodologi Pendidikan
+          </h3>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
+            Metode Pembelajaran Pesantren
+          </h2>
+          <div class="w-24 h-1.5 bg-primary mx-auto rounded-full mt-4"></div>
+          <p class="text-gray-600 max-w-2xl mx-auto pt-4 font-light">
+            Kami mengkombinasikan metode klasik pesantren salaf yang telah teruji selama berabad-abad 
+            dengan metode khusus yang dikembangkan secara internal untuk mempercepat pemahaman santri.
+          </p>
+        </div>
+
+        <!-- Salaf Methods Grid -->
+        <div class="mb-20">
+          <h4 class="text-2xl font-bold text-gray-800 mb-8 flex items-center gap-3">
+            <span class="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center text-sm">1</span>
+            Metode Utama Pesantren Salaf
+          </h4>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              v-for="method in salafMethods"
+              :key="method.name"
+              class="bg-white p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 group"
+            >
+              <div class="flex justify-between items-start mb-6">
+                <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" :d="method.icon" />
+                  </svg>
+                </div>
+                <span class="text-[10px] font-bold text-primary uppercase tracking-widest bg-primary/5 px-3 py-1 rounded-full">
+                  {{ method.type }}
+                </span>
+              </div>
+              <h5 class="text-xl font-bold text-gray-900 mb-3">{{ method.name }}</h5>
+              <p class="text-gray-500 text-sm leading-relaxed">{{ method.description }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Special Methods Section -->
+        <div>
+          <h4 class="text-2xl font-bold text-gray-800 mb-8 flex items-center gap-3">
+            <span class="w-8 h-8 bg-secondary text-white rounded-lg flex items-center justify-center text-sm">2</span>
+            Metode Khusus Nurul Hidayah Parungsapi
+          </h4>
+          <div class="grid lg:grid-cols-2 gap-12">
+            <div
+              v-for="special in specialMethods"
+              :key="special.name"
+              class="relative bg-white rounded-[3rem] p-8 md:p-12 border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden group"
+            >
+              <!-- Decorative background -->
+              <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary/5 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
+              
+              <div class="relative z-10 flex flex-col md:flex-row gap-8 items-start">
+                <div class="w-20 h-20 bg-secondary/10 rounded-[2rem] flex items-center justify-center text-secondary shrink-0 group-hover:rotate-6 transition-transform">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" :d="special.icon" />
+                  </svg>
+                </div>
+                <div class="space-y-6">
+                  <div>
+                    <h5 class="text-2xl font-bold text-gray-900 mb-3">{{ special.name }}</h5>
+                    <p class="text-gray-600 leading-relaxed font-light">{{ special.description }}</p>
+                  </div>
+                  <div class="grid grid-cols-2 gap-4 pt-4">
+                    <div v-for="feat in special.features" :key="feat" class="flex items-center gap-2 text-sm font-medium text-gray-700">
+                      <div class="w-2 h-2 bg-secondary rounded-full"></div>
+                      {{ feat }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section class="py-24 bg-white overflow-hidden">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="max-w-4xl mx-auto text-center mb-20 space-y-6">
+          <h3
+            class="text-secondary font-bold tracking-widest uppercase text-sm"
+          >
+            Roadmap Pendidikan
+          </h3>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
+            Kurikulum 7 Tahun
+          </h2>
+          <p class="text-lg text-gray-600 font-light leading-relaxed">
+            Kurikulum Pondok Pesantren Nurul Hidayah Parungsapi dirancang secara
+            komprehensif selama tujuh tahun. Santri diharapkan menyelesaikan
+            masa pendidikan minimal tujuh tahun untuk mencapai kompetensi
+            maksimal sebelum melanjutkan pengabdian atau pendidikan tinggi.
+          </p>
+        </div>
+
+        <div class="relative">
+          <!-- Timeline Line -->
+          <div
+            class="absolute left-1/2 top-0 bottom-0 w-px bg-gray-200 hidden lg:block transform -translate-x-1/2"
+          ></div>
+
+          <div class="space-y-24">
+            <div
+              v-for="(year, index) in curriculumYears"
+              :key="year.title"
+              class="relative flex flex-col lg:flex-row items-center gap-12"
+              :class="{ 'lg:flex-row-reverse': index % 2 === 1 }"
+            >
+              <!-- Timeline Dot -->
+              <div
+                class="absolute left-1/2 top-0 -translate-x-1/2 w-12 h-12 bg-white border-4 border-primary rounded-full z-10 hidden lg:flex items-center justify-center font-bold text-primary shadow-lg"
+              >
+                {{ index + 1 }}
+              </div>
+
+              <!-- Content Card -->
+              <div class="w-full lg:w-1/2">
+                <div
+                  class="bg-white p-8 md:p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 relative group overflow-hidden"
+                >
+                  <!-- Background Pattern -->
+                  <div
+                    class="absolute -right-10 -top-10 w-40 h-40 bg-primary/5 rounded-full group-hover:scale-150 transition-transform duration-700"
+                  ></div>
+
+                  <div class="relative z-10">
+                    <div class="flex items-center gap-4 mb-6">
+                      <div
+                        class="lg:hidden w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold"
+                      >
+                        {{ index + 1 }}
+                      </div>
+                      <div>
+                        <h4 class="text-2xl font-bold text-gray-900">
+                          {{ year.title }}
+                        </h4>
+                        <p class="text-primary font-medium text-sm">
+                          {{ year.tagline }}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                      <!-- Hafalan -->
+                      <div class="space-y-4">
+                        <div
+                          class="flex items-center gap-2 text-secondary font-bold text-sm uppercase tracking-wider"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                            />
+                          </svg>
+                          Hafalan
+                        </div>
+                        <ul class="space-y-2">
+                          <li
+                            v-for="item in year.hafalan"
+                            :key="item"
+                            class="text-sm text-gray-600 flex items-start gap-2"
+                          >
+                            <span class="text-primary mt-1">✓</span>
+                            {{ item }}
+                          </li>
+                        </ul>
+                      </div>
+
+                      <!-- Kemampuan -->
+                      <div class="space-y-4">
+                        <div
+                          class="flex items-center gap-2 text-secondary font-bold text-sm uppercase tracking-wider"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04M12 21.48V22M7 13h10M12 5V3m0 18v-2"
+                            />
+                          </svg>
+                          Kemampuan
+                        </div>
+                        <ul class="space-y-2">
+                          <li
+                            v-for="item in year.kemampuan"
+                            :key="item"
+                            class="text-sm text-gray-600 flex items-start gap-2"
+                          >
+                            <span class="text-secondary mt-1">★</span>
+                            {{ item }}
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Spacer for Timeline -->
+              <div class="hidden lg:block lg:w-1/2"></div>
+            </div>
           </div>
         </div>
       </div>

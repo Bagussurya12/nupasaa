@@ -360,7 +360,6 @@ const leaders = [
         </div>
       </div>
     </section>
-
     <!-- Leadership Section -->
     <section class="py-20 md:py-32 bg-gray-50">
       <div class="container mx-auto px-6 text-center mb-16 md:mb-24 space-y-6">
@@ -422,6 +421,82 @@ const leaders = [
                 class="text-primary font-bold tracking-widest uppercase text-xs md:text-sm"
               >
                 {{ leader.role }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Histra & Histri Section -->
+    <section class="py-20 md:py-32 bg-white overflow-hidden">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 md:mb-24 space-y-6">
+          <div
+            class="inline-block px-4 py-1.5 bg-secondary/10 text-secondary rounded-full text-xs md:text-sm font-bold uppercase tracking-[0.2em]"
+          >
+            Pembinaan Terpisah
+          </div>
+          <h2
+            class="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight"
+          >
+            Mencetak Generasi <span class="text-primary">Rabbani</span>
+          </h2>
+          <p
+            class="text-gray-500 max-w-2xl mx-auto text-base md:text-lg leading-relaxed"
+          >
+            Pesantren kami menerapkan sistem pembinaan terpisah antara santri
+            putra dan santri putri untuk menjaga adab dan kekhusyukan dalam
+            menuntut ilmu.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
+          <!-- Histra -->
+          <div
+            class="group relative rounded-[3rem] overflow-hidden shadow-2xl transition-all duration-700 hover:-translate-y-2"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent z-10 opacity-60 group-hover:opacity-80 transition-opacity"
+            ></div>
+            <img
+              src="/assets/profile/santriawan.jpeg"
+              alt="Histra (Santriawan)"
+              class="w-full h-[400px] md:h-[600px] object-cover transition-transform duration-1000 group-hover:scale-110"
+            />
+            <div class="absolute bottom-10 left-10 z-20 space-y-2">
+              <span
+                class="px-4 py-1.5 bg-secondary text-white text-xs font-bold uppercase tracking-widest rounded-full"
+                >Himpunan Santri Putra</span
+              >
+              <h3 class="text-4xl md:text-5xl font-bold text-white">HISTRA</h3>
+              <p class="text-white/80 max-w-xs font-light">
+                Pembinaan kemandirian, ketangkasan, dan kedalaman ilmu agama
+                bagi calon cendikiawan muslim.
+              </p>
+            </div>
+          </div>
+
+          <!-- Histri -->
+          <div
+            class="group relative rounded-[3rem] overflow-hidden shadow-2xl transition-all duration-700 hover:-translate-y-2"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent z-10 opacity-60 group-hover:opacity-80 transition-opacity"
+            ></div>
+            <img
+              src="/assets/profile/santriawati.jpeg"
+              alt="Histri (Santriawati)"
+              class="w-full h-[400px] md:h-[600px] object-cover transition-transform duration-1000 group-hover:scale-110"
+            />
+            <div class="absolute bottom-10 left-10 z-20 space-y-2">
+              <span
+                class="px-4 py-1.5 bg-secondary text-white text-xs font-bold uppercase tracking-widest rounded-full"
+                >Himpunan Santri Putri</span
+              >
+              <h3 class="text-4xl md:text-5xl font-bold text-white">HISTRI</h3>
+              <p class="text-white/80 max-w-xs font-light">
+                Mewujudkan muslimah yang berakhlakul karimah, cerdas, dan unggul
+                dalam ilmu keislaman modern.
               </p>
             </div>
           </div>
