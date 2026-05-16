@@ -40,10 +40,9 @@ const corePrograms = [
     subtitle: "Sekolah Tinggi Agama Islam (STAI)",
     description:
       "Perpaduan harmonis antara kedalaman ilmu pesantren dan standar pendidikan nasional, menghadirkan generasi berilmu luas, berakhlak mulia, serta siap bersaing di dunia akademik maupun profesional.",
-    image:
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200",
+    image: "/assets/program/perguruan-tinggi.jpeg",
     features: [
-      "S2 Pendidikan Agama Islam",
+      "S1 Pendidikan Agama Islam",
       "S1 Ekonomi Syariah",
       "S1 Hukum Ekonomi Syariah",
       "S1 Manajemen Bisnis Syariah",
